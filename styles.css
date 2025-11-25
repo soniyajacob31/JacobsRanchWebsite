@@ -40,7 +40,7 @@ nav {
   font-size: 1.5rem; /* Use rem for font size */
   font-weight: bold;
   font-style: italic;
-  padding: 0 2rem;
+  padding: 0 0rem;
 }
 
 nav .nav-items a {
@@ -813,6 +813,28 @@ nav .nav-items a:hover {
     width: 100%;
   }
 }
+
+/* Contact page mobile centering fix */
+@media screen and (max-width: 768px) {
+    .contact-info {
+        width: 100%;
+        text-align: center;
+        padding: 0 1rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info h1,
+    .contact-info p,
+    .contact-info a {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
+
 
 /* Phone screens */
 @media screen and (max-width: 768px) {
