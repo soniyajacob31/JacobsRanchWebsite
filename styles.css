@@ -1,778 +1,901 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-html, body {
-    min-height: 100%;
-    background-color: #d3d1d178;
+html,
+body {
+  min-height: 100%;
+  background-color: #d3d1d178;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-    flex: 1; /* Pushes footer to bottom */
+  flex: 1; /* Pushes footer to bottom */
 }
-
 
 /* HOME PAGE */
 nav {
-    height: 5vh;  /* Set height relative to viewport height */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0rem calc((100vw - 90%) / 2);
-    top: 1vw;  /* top spacing*/
-
+  height: 5vh; /* Set height relative to viewport height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem calc((100vw - 90%) / 2);
+  top: 1vw; /* top spacing*/
 }
 
 nav {
-    position: relative;
-    z-index: 1000;
+  position: relative;
+  z-index: 1000;
 }
 
 .logo {
-    color: #000000;
-    font-size: 1.5rem;  /* Use rem for font size */
-    font-weight: bold;
-    font-style: italic;
-    padding: 0 2rem;
+  color: #000000;
+  font-size: 1.5rem; /* Use rem for font size */
+  font-weight: bold;
+  font-style: italic;
+  padding: 0 2rem;
 }
 
 nav .nav-items a {
-    text-decoration: none;
-    color: #000000;
-    padding: 0 1.5rem;
-    transition: color 0.3s ease-in-out;
+  text-decoration: none;
+  color: #000000;
+  padding: 0 1.5rem;
+  transition: color 0.3s ease-in-out;
 }
 
 nav .nav-items a:hover {
-    color: #000ac0 !important;
+  color: #000ac0 !important;
 }
 
 .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    text-align: center;
-    padding: 5vh 5vw;  /* Tighter padding using relative units */
-    max-width: 1200px; /* Set max-width to prevent it from stretching too wide */
-    margin: 0 auto; /* Center align horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  text-align: center;
+  padding: 5vh 5vw; /* Tighter padding using relative units */
+  max-width: 1200px; /* Set max-width to prevent it from stretching too wide */
+  margin: 0 auto; /* Center align horizontally */
 }
 
 .hero {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-image {
-    width: 100vw;
-    max-width: 100vw;  /* Use viewport width */
-    height: auto;
-    margin-top: 0rem;
-    margin-bottom: 0rem;
-    object-fit: cover; /* ✨ optional: makes it prettier if needed */
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  object-fit: cover;
+  display: block;
 }
 
 .title h1 {
-    margin-top: 5rem;
-    margin-bottom: 1rem;
-    font-size: 4rem;  /* Use rem */
-    font-family: 'Playfair Display', serif;
-    font-weight: 300;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  font-size: 4rem; /* Use rem */
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
 }
 
 .title h2 {
-    margin-top: 0rem;
-    margin-bottom: 1rem;
-    font-size: 3.5rem;  /* Use rem */
-    font-family: 'Playfair Display', serif;
-    font-weight: 300;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  font-size: 3.5rem; /* Use rem */
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
 }
 
 .title p {
-    margin-bottom: 5rem;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    font-family: 'Linotype Didot', serif;
-    font-style: italic;
+  margin-bottom: 5rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-family: "Linotype Didot", serif;
+  font-style: italic;
 }
-
 
 /* About Us section */
 .services {
-    display: flex;
-    flex-direction: column; /* Align items vertically */
-    align-items: center; /* Center items horizontally */
-    height: auto;
-    padding: 5rem 5vw; /* Add padding for spacing */
-    max-width: 1200px; /* Set max-width to limit the size */
-    margin: 0 auto; /* Center align content */
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center items horizontally */
+  height: auto;
+  padding: 5rem 5vw; /* Add padding for spacing */
+  max-width: 1200px; /* Set max-width to limit the size */
+  margin: 0 auto; /* Center align content */
 }
 
 .services h1 {
-    margin-top: 0 rem; /* Adjust the top margin */
-    margin-bottom: 2rem;
-    font-size: 3rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: 1;
-    letter-spacing: 0px;
+  margin-top: 0 rem; /* Adjust the top margin */
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 1;
+  letter-spacing: 0px;
 }
 
 .services p {
-    margin-top: -5rem;
-    margin-bottom: 0rem;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    text-align: center;
-    font-family: 'Palatino Linotype', serif;
-    text-indent: 0rem;
+  margin-top: -5rem;
+  margin-bottom: 0rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: center;
+  font-family: "Palatino Linotype", serif;
+  text-indent: 0rem;
 }
-
 
 /* Comdown section */
 .comedown {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .comedown .chat-button {
-    display: inline-block;
-    margin-top: 5rem;
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-    border: none;
-    text-decoration: none;
-    color: #fdfdfd;
-    background: #000000;
-    cursor: pointer;
-    border-radius: 50px;
-    text-align: center;
-    transition: background 0.3s ease-in-out;
+  display: inline-block;
+  margin-top: 5rem;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  text-decoration: none;
+  color: #fdfdfd;
+  background: #000000;
+  cursor: pointer;
+  border-radius: 50px;
+  text-align: center;
+  transition: background 0.3s ease-in-out;
 }
 
 .comedown .chat-button:hover {
-    background: #0023eb;
-    color: #ffffff;
+  background: #0023eb;
+  color: #ffffff;
 }
 
 .comedown h1 {
-    margin-top: 10 rem;
-    margin-bottom: 1rem;
-    font-size: 3rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: 100;
+  margin-top: 10 rem;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
 }
 
 .comedown h2 {
-    margin-top: 0;
-    margin-bottom: 2rem;
-    font-size: 3rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: 100;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
 }
 
 .comedown p {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    font-family: 'Linotype Didot', serif;
-    font-style: italic;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Linotype Didot", serif;
+  font-style: italic;
 }
 
 /* Copyright */
 .copyright h1 {
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 10rem;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
 }
-
-
-
-
-
-
 
 /* ABOUT PAGE */
 .about-section {
-    position: relative;  /* Allows absolute positioning of the image */
-    display: flex;
-    align-items: center;  /* Vertically center the content */
-    justify-content: flex-start;  /* Align text content to the left */
-    height: 100vh;  /* Full viewport height */
-    padding: 0 5vw 0 5vw;  /* Add space on both sides of the screen */
+  position: relative; /* Allows absolute positioning of the image */
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: flex-start; /* Align text content to the left */
+  height: 100vh; /* Full viewport height */
+  padding: 0 5vw 0 5vw; /* Add space on both sides of the screen */
 }
 
 .about-image {
-    position: absolute;  /* Image is positioned absolutely */
-    top: 5vw;  /* Add margin to the top side of the image */
-    right: 5vw;  /* Add margin to the right side of the image */
-    width: 55%;  /* Image width is set to 55% */
-    height: 100%;  /* Ensure the image takes the full height of the section */
-    background-image: url('./1Horse.jpg');  /* Set the image */
-    background-size: cover;  /* Ensure the image covers the section */
-    background-position: center;  /* Position the image in the center */
-    background-repeat: no-repeat;
-    z-index: 0;  /* Image stays behind the text box */
+  position: absolute; /* Image is positioned absolutely */
+  top: 5vw; /* Add margin to the top side of the image */
+  right: 5vw; /* Add margin to the right side of the image */
+  width: 55%; /* Image width is set to 55% */
+  height: 100%; /* Ensure the image takes the full height of the section */
+  background-image: url("images/1Horse.jpg"); /* Set the image */
+  background-size: cover; /* Ensure the image covers the section */
+  background-position: center; /* Position the image in the center */
+  background-repeat: no-repeat;
+  z-index: 0; /* Image stays behind the text box */
 }
 
 .about-content {
-    position: relative;  /* Ensure content stays above the image */
-    background: rgba(244, 243, 243, 0.74); /* Transparent background */
-    padding: 2rem;  /* Padding inside the text box */
-    max-width: 600px;  /* Limit the max width of the text box */
-    width: 45%;  /* Text box width is 45% of the section */
-    z-index: 1;  /* Ensure content stays above the image */
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Shadow for readability */
-    text-align: left;  /* Align the text to the left */
-    top: 5vw;  /* Add margin to the top side of the text box */
-
+  position: relative; /* Ensure content stays above the image */
+  background: rgba(244, 243, 243, 0.74); /* Transparent background */
+  padding: 2rem; /* Padding inside the text box */
+  max-width: 600px; /* Limit the max width of the text box */
+  width: 45%; /* Text box width is 45% of the section */
+  z-index: 1; /* Ensure content stays above the image */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Shadow for readability */
+  text-align: left; /* Align the text to the left */
+  top: 5vw; /* Add margin to the top side of the text box */
 }
 
 .about-content h1 {
-    font-size: 2.6rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: 100;
-    margin-bottom: 20px;
-    text-align: center;
+  font-size: 2.6rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .about-content p {
-    font-size: 1rem;
-    line-height: 1.6;
-    font-family: 'Raleway', serif;
-    color: #000000;
-    margin-bottom: 20px;
-    padding-left: 2rem;  /* Moves the paragraph text slightly to the right */
-    text-indent: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: "Raleway", serif;
+  color: #000000;
+  margin-bottom: 20px;
+  padding-left: 2rem; /* Moves the paragraph text slightly to the right */
+  text-indent: 1rem;
 }
 
 /* Ensuring responsiveness for smaller screens */
 @media screen and (max-width: 1024px) {
-    .about-image {
-        width: 100%; /* Image spans full width */
-        height: 50vh; /* Adjust image height */
-        right: 0; /* Reset the right margin */
-    }
+  .about-image {
+    width: 100%; /* Image spans full width */
+    height: 50vh; /* Adjust image height */
+    right: 0; /* Reset the right margin */
+  }
 
-    .about-content {
-        max-width: 100%;  /* Text box takes full width on smaller screens */
-        margin-left: 0;  /* Reset margin */
-    }
+  .about-content {
+    max-width: 100%; /* Text box takes full width on smaller screens */
+    margin-left: 0; /* Reset margin */
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .about-image {
-        height: 40vh; /* Further reduce image height */
-    }
+  .about-image {
+    height: 40vh; /* Further reduce image height */
+  }
 
-    .about-content {
-        max-width: 100%; /* Text box takes full width on mobile */
-    }
+  .about-content {
+    max-width: 100%; /* Text box takes full width on mobile */
+  }
 }
-
 
 /* Amenities section */
 .amenities {
-    padding-top: 5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 5rem;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 5rem;
 }
 
 .amenities h1 {
-    margin-top: 7rem;
-    margin-bottom: 3rem;
-    font-size: 1.2rem;
-    font-family: 'Linotype Didot', serif;
-    font-weight: 100;
-    font-style: italic;
+  margin-top: 7rem;
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+  font-family: "Linotype Didot", serif;
+  font-weight: 100;
+  font-style: italic;
 }
 
 .amenities h2 {
-    margin-bottom: 3rem;
-    font-size: 3rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: 100;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
 }
 
 /* Grid for Amenities */
 .amenities-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem 6rem;
-    max-width: 1200px;
-    width: 60%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 6rem;
+  max-width: 1200px;
+  width: 60%;
 }
 
 .amenities-grid p {
-    font-size: 1.3rem;
-    font-family: 'Times New Roman', sans-serif;
-    font-weight: 400;
-    margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+  font-family: "Times New Roman", sans-serif;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
 }
 
 /* Services Section */
 .services-title {
-    text-align: center;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
 }
 
 .services-title h2 {
-    font-size: 3rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: 100;
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
 }
 
 .services-section {
-    position: relative;
-    background-image: url('./mainBack.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 10rem 10%;
-    text-align: center;
+  position: relative;
+  background-image: url("images/mainBack.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10rem 10%;
+  text-align: center;
 }
 
 .services-container {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .service-box {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 2rem;
-    max-width: 260px;
-    text-align: center;
-    border-radius: 0px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-    position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  max-width: 260px;
+  text-align: center;
+  border-radius: 0px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .service-box h3 {
-    margin-bottom: 1rem;
-    font-size: 1.4rem;
-    font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-family: "Playfair Display", serif;
 }
 
 .service-box p {
-    font-size: 1rem;
-    font-family: 'Linotype Didot', serif;
-    font-weight: 100;
-    font-style: italic;
+  font-size: 1rem;
+  font-family: "Linotype Didot", serif;
+  font-weight: 100;
+  font-style: italic;
 }
 
 /* Number Circles */
 .service-number {
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 60px;
-    background: rgba(240, 240, 240, 0.9);
-    border-radius: 50%;
-    font-size: 1.5rem;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(240, 240, 240, 0.9);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-
-
 
 /* MEET THE TEAM PAGE */
 .team-section {
-    text-align: center;
-    padding: 5rem 0;
+  text-align: center;
+  padding: 5rem 0;
 }
 
 .team-section h1 {
-    font-size: 4rem;
-    font-family:'Playfair Display', serif;
-    font-weight: 100; 
-    margin-bottom: 60px;
+  font-size: 4rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  margin-bottom: 60px;
 }
 
 /* Slideshow Container */
 .slideshow-container {
-    position: relative;
-    max-width: 900px;
-    margin: auto;
+  position: relative;
+  max-width: 900px;
+  margin: auto;
 }
 
 /* Team Member Container */
 .team-member {
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 2rem;
-    background: #f8f8f8;
-    border-radius: 10px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem;
+  background: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Team Member Image */
 .team-member img {
-    width: 50%;
-    max-width: 400px;
-    border-radius: 10px;
+  width: 50%;
+  max-width: 400px;
+  border-radius: 10px;
 }
 
 /* Right-Side Text Box */
 .team-info {
-    background: white;
-    padding: 3rem;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-    flex: 1;
-    text-align: center; /* Center text inside box */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers text horizontally */
-    justify-content: center; /* Centers text vertically */
-    height: 100%; /* Ensure full height */
+  background: white;
+  padding: 3rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  flex: 1;
+  text-align: center; /* Center text inside box */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers text horizontally */
+  justify-content: center; /* Centers text vertically */
+  height: 100%; /* Ensure full height */
 }
 
 .team-info h2 {
-    font-size: 3rem;
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 0.5rem;
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0.5rem;
 }
 
 .team-role {
-    font-size: 1.5rem;
-    font-style: italic;
+  font-size: 1.5rem;
+  font-style: italic;
 }
 
 /* Navigation Dots */
 .dots-container {
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem; /* Reduce space before copyright */
-
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem; /* Reduce space before copyright */
 }
 
 .dot {
-    height: 12px;
-    width: 12px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.3s;
-    cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+  cursor: pointer;
 }
 
 .dot.active {
-    background-color: black;
+  background-color: black;
 }
 
 /* Navigation Arrows */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    cursor: pointer;
-    padding: 10px;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
 }
 
 .prev {
-    left: -50px;
+  left: -50px;
 }
 
 .next {
-    right: -50px;
+  right: -50px;
 }
 
 /* Fade Animation */
 .fade {
-    animation: fadeEffect 2s;
+  animation: fadeEffect 2s;
 }
 
 @keyframes fadeEffect {
-    from { opacity: 0.8; }
-    to { opacity: 1; }
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
-
-
-
-
-
 
 /* GALLERY PAGE */
 .gallery-section {
-    text-align: center;
-    padding: 5rem 0;
+  text-align: center;
+  padding: 5rem 0;
 }
 
-.gallery-section h1{
-        font-size: 4rem;
-        font-family:'Playfair Display', serif;
-        font-weight: 100; 
-        margin-bottom: 40px;
+.gallery-section h1 {
+  font-size: 4rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  margin-bottom: 40px;
 }
 
 /* Slideshow Container */
 .slideshow-container {
-    position: relative;
-    max-width: 900px;
-    margin: auto;
-    overflow: hidden; /* Prevents overflow */
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden; /* Prevents overflow */
 }
 
 /* Gallery Slide Styling */
 .gallery-slide {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .gallery-slide img {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 10px;
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 /* Navigation Dots */
 .dots-container {
-    text-align: center;
-    margin-top: 1rem;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .dot {
-    height: 12px;
-    width: 12px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.3s;
-    cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+  cursor: pointer;
 }
 
 .dot.active {
-    background-color: black;
+  background-color: black;
 }
 
 /* Navigation Arrows */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    cursor: pointer;
-    padding: 10px;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
 }
 
 .prev {
-    left: 10px;
+  left: 10px;
 }
 
 .next {
-    right: 10px;
+  right: 10px;
 }
 
 /* Fade Animation */
 .fade {
-    animation: fadeEffect 2s;
+  animation: fadeEffect 2s;
 }
 
 @keyframes fadeEffect {
-    from { opacity: 0.8; }
-    to { opacity: 1; }
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
-
-
-
-
-
-
 
 /* CONTACT SECTION */
 .contact-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    margin: auto;
-    padding: 4rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  padding: 4rem 0;
 }
 
-/* Left Side: Ranch Information */
 /* Left Side: Ranch Information */
 .contact-info {
-    width: 40%;
-    text-align: center; /* Center all text */
-    padding-right: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
+  width: 40%;
+  text-align: center; /* Center all text */
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
 }
-
 
 /* Contact Info Section */
 .contact-info h1 {
-    margin-top: 6rem;
-    margin-bottom: 1rem;
-    font-size: 3rem;
-    font-family:'Playfair Display', serif;
-    font-weight: 100; 
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
 }
 
 .contact-info p {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    line-height: 1.5;   
-    font-family: 'Linotype Didot', serif; /* Set font family to Linotype Didot */
-    font-style: italic; /* Make text italic */
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Linotype Didot", serif; /* Set font family to Linotype Didot */
+  font-style: italic; /* Make text italic */
 }
-
 
 /* Right Side: Contact Form */
 .contact-form {
-    margin-top: 5rem;
-    width: 55%;
-    background: #ffffff;
-    padding: 2rem;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 5rem;
+  width: 55%;
+  background: #ffffff;
+  padding: 2rem;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Input Box Styling */
 .form-group {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .input-box {
-    width: 48%;
-    margin-bottom: 1rem;
+  width: 48%;
+  margin-bottom: 1rem;
 }
 
 .input-box label {
-    display: block;
-    font-size: 1rem;
-    margin-bottom: 0.3rem;
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
 }
 
 .input-box input,
 .input-box textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: none;
-    border-bottom: 2px solid black;
-    font-size: 1rem;
-    outline: none;
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 1rem;
+  outline: none;
 }
 
 .input-box input:focus,
 .input-box textarea:focus {
-    border-bottom: 2px solid #000ac0;
+  border-bottom: 2px solid #000ac0;
 }
 
 /* Submit Button */
 .submit-button {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1.2rem;
-    background: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 1rem;
-    font-style: italic;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-style: italic;
 }
 
 .submit-button:hover {
-    background: #000ac0;
+  background: #000ac0;
 }
-
-
-
-
-
-
-
-
-
-
 
 /* Responsive Fix for Smaller Screens */
 @media screen and (max-width: 1024px) {
-    .about-section {
-        flex-direction: column;
-        height: auto;
-        padding: 3rem 5%;
-    }
+  .about-section {
+    flex-direction: column;
+    height: auto;
+    padding: 3rem 5%;
+  }
 
-    .about-content {
-        max-width: 100%;
-        text-align: center;
-    }
+  .about-content {
+    max-width: 100%;
+    text-align: center;
+  }
 
-    .about-image {
-        width: 80%;
-        height: 50vh; /* Smaller height for mobile */
-        position: relative;
-    }
+  .about-image {
+    width: 80%;
+    height: 50vh; /* Smaller height for mobile */
+    position: relative;
+  }
 
-    .amenities-grid {
-        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
-        gap: 1.5rem 4rem;
-    }
-   
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+    gap: 1.5rem 4rem;
+  }
+
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 }
 
-
-
 @media screen and (max-width: 768px) {
-    .amenities-grid {
-        grid-template-columns: repeat(1, 1fr); /* Switch to 1 column for mobile */
-        text-align: center;
-    }
+  .amenities-grid {
+    grid-template-columns: repeat(1, 1fr); /* Switch to 1 column for mobile */
+    text-align: center;
+  }
+}
+
+/* RESPONSIVE FIXES */
+
+/* Tablet + small laptop adjustments */
+@media screen and (max-width: 1024px) {
+  /* NAV: hide desktop links so hamburger can appear */
+  .nav-items {
+    display: none;
+  }
+
+  /* Allow mobile hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  /* ABOUT PAGE stacks vertically */
+  .about-section {
+    flex-direction: column;
+    height: auto;
+    padding-top: 3rem;
+  }
+
+  .about-image {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    top: 0;
+    right: 0;
+  }
+
+  .about-content {
+    width: 100%;
+    top: 0;
+    margin-top: 2rem;
+    text-align: left;
+  }
+
+  /* Amenities: shrink to 2 per row */
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  /* Services section stacks vertically */
+  .services-container {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  /* Contact page stacks */
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+
+  .input-box {
+    width: 100%;
+  }
+}
+
+/* Phone screens */
+@media screen and (max-width: 768px) {
+  /* Amenities: 1 per row */
+  .amenities-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* Slight text shrink to fit phones */
+  .title h1 {
+    font-size: 3rem;
+  }
+  .title h2 {
+    font-size: 2.3rem;
+  }
+  .title p {
+    font-size: 1.2rem;
+  }
+
+  /* Gallery title shrink */
+  .gallery-section h1 {
+    font-size: 3rem;
+  }
+}
+/* Fix nav touching the top on phones */
+@media screen and (max-width: 768px) {
+  nav {
+    padding-top: 1.2rem !important;
+  }
+}
+
+/* Fix nav touching the top on phones */
+@media screen and (max-width: 768px) {
+  nav {
+    padding-top: 1.2rem !important;
+  }
+}
+
+/* Hamburger hidden by default */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding-right: 2rem;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: black;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: white;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-menu a {
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-menu.show {
+  display: flex;
+}
+
+/* Show hamburger on phone */
+@media screen and (max-width: 768px) {
+  .nav-items {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
 }
