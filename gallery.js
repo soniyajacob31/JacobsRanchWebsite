@@ -1,22 +1,49 @@
 let slideIndex = 0;
+let isTransitioning = false;
+let autoSlideTimer = null;
+const AUTO_SLIDE_INTERVAL = 5000; // 5 seconds
 const slides = document.getElementsByClassName("gallery-slide");
 const dots = document.getElementsByClassName("dot");
 
-// Function to show the selected slide
+// Start or restart the auto-advance timer
+function startAutoSlide() {
+    if (autoSlideTimer) clearInterval(autoSlideTimer);
+    autoSlideTimer = setInterval(() => {
+        changeSlide(1);
+    }, AUTO_SLIDE_INTERVAL);
+}
+
+// Smooth crossfade
 function showSlides(n) {
+    if (isTransitioning || !slides.length) return;
+    isTransitioning = true;
+
     // Loop back if at the end
     if (n >= slides.length) { slideIndex = 0; }
-    if (n < 0) { slideIndex = slides.length - 1; }
+    else if (n < 0) { slideIndex = slides.length - 1; }
+    else { slideIndex = n; }
 
-    // Hide all slides
+    // Fade out current slide
     for (let i = 0; i < slides.length; i++) {
+        slides[i].style.opacity = "0";
         slides[i].style.display = "none";
-        dots[i].classList.remove("active");
+        if (dots[i]) dots[i].classList.remove("active");
     }
 
-    // Show the selected slide
+    // Show and fade in selected slide
     slides[slideIndex].style.display = "flex";
-    dots[slideIndex].classList.add("active");
+    slides[slideIndex].style.opacity = "0";
+    if (dots[slideIndex]) dots[slideIndex].classList.add("active");
+
+    requestAnimationFrame(() => {
+        slides[slideIndex].style.transition = "opacity 0.5s ease-in-out";
+        slides[slideIndex].style.opacity = "1";
+    });
+
+    setTimeout(() => { isTransitioning = false; }, 500);
+
+    // Reset timer for full 5 seconds after any slide change
+    startAutoSlide();
 }
 
 // Function to change slides using arrows
@@ -34,9 +61,4 @@ function setSlide(n) {
 // Initialize slideshow on page load
 document.addEventListener("DOMContentLoaded", function () {
     showSlides(slideIndex);
-
-    // Auto-slide every 5 seconds
-    setInterval(() => {
-        changeSlide(1);
-    }, 5000);
 });

@@ -1,56 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="icon" href="images/favicon.png" type="image/png" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Team - Jacob's Ranch and Stables</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="team.js"></script>
-    <!-- JavaScript for slideshow -->
-  </head>
+<head>
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team - Jacob's Ranch and Stables</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="team.js"></script>
+  <!-- JavaScript for slideshow -->
+</head>
 
-  <body>
-    <nav>
-      <div class="logo">Jacob's Ranch and Stables</div>
-      <div class="nav-items">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <!-- <a href="team.html">Meet The Team</a> -->
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <!-- HAMBURGER (mobile only) -->
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+<body>
+  <div class="aurora-bg" aria-hidden="true"></div>
+  <nav>
+    <a href="index.html" class="logo">Jacob's Ranch and Stables</a>
+    <div class="nav-items">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <!-- <a href="team.html">Meet The Team</a> -->
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <!-- HAMBURGER (mobile only) -->
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-      <!-- MOBILE MENU -->
-      <div class="mobile-menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
-    <section class="team-section">
-      <h1>MEET THE TEAM</h1>
+  <section class="team-section">
+    <h1>MEET THE TEAM</h1>
 
-      <div class="slideshow-container">
-        <!-- Team Member 1 -->
-        <div class="team-member fade" style="display: flex">
-          <img src="images/parents1.jpg" alt="Sinichan Jacob" />
-          <div class="team-info">
-            <h2>Sinichan and Rosy Jacob</h2>
-            <p class="team-role">Owners</p>
-          </div>
+    <div class="slideshow-container">
+      <!-- Team Member 1 -->
+      <div class="team-member fade" style="display: flex">
+        <img src="images/parents1.jpg" alt="Sinichan Jacob" />
+        <div class="team-info">
+          <h2>Sinichan and Rosy Jacob</h2>
+          <p class="team-role">Owners</p>
         </div>
+      </div>
 
-        <!-- Team Member 2 -->
-        <!-- <div class="team-member fade">
+      <!-- Team Member 2 -->
+      <!-- <div class="team-member fade">
                 <img src="images/soni.jpg" alt="Rosy Jacob">
                 <div class="team-info">
                     <h2>Rosy Jacob</h2>
@@ -58,31 +59,32 @@
                 </div>
             </div> -->
 
-        <!-- Team Member 3 -->
-        <div class="team-member fade">
-          <img src="images/soni1.jpg" alt="Soniya Jacob" />
-          <div class="team-info">
-            <h2>Soniya Jacob</h2>
-            <p class="team-role">Manager</p>
-          </div>
+      <!-- Team Member 3 -->
+      <div class="team-member fade">
+        <img src="images/soni1.jpg" alt="Soniya Jacob" />
+        <div class="team-info">
+          <h2>Soniya Jacob</h2>
+          <p class="team-role">Manager</p>
         </div>
-
-        <!-- Navigation Dots -->
-        <div class="dots-container">
-          <span class="dot" onclick="setSlide(0)"></span>
-          <!-- <span class="dot" onclick="setSlide(1)"></span> -->
-          <span class="dot" onclick="setSlide(2)"></span>
-        </div>
-
-        <!-- Navigation Arrows -->
-        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
       </div>
-    </section>
 
-    <div class="copyright">
-      <h1>©2025 by Jacob's Ranch and Stables. All Rights Reserved.</h1>
+      <!-- Navigation Dots -->
+      <div class="dots-container">
+        <span class="dot" onclick="setSlide(0)"></span>
+        <!-- <span class="dot" onclick="setSlide(1)"></span> -->
+        <span class="dot" onclick="setSlide(2)"></span>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
-    <script src="hamburger.js"></script>
-  </body>
+  </section>
+
+  <div class="copyright">
+    <h1>©2026 by Jacob's Ranch and Stables. All Rights Reserved.</h1>
+  </div>
+  <script src="hamburger.js"></script>
+  <script src="app.js"></script>
+</body>
 </html>
