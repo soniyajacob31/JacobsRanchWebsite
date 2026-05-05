@@ -19,7 +19,45 @@
 
   function initScrollAnimations() {
     document.querySelectorAll(".animate-on-scroll").forEach((el) => {
-      observer.observe(el);
+      const attach = () => {
+        if (el.dataset.revealObserving) return;
+        el.dataset.revealObserving = "1";
+        observer.observe(el);
+      };
+
+      const rect = el.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const alreadyPeekingWhileAtTop =
+        window.scrollY < 2 && rect.top < vh * 0.92 && rect.bottom > 96;
+
+      if (!alreadyPeekingWhileAtTop) {
+        attach();
+        return;
+      }
+
+      let fallbackTimer = null;
+      const armFallback = () => {
+        fallbackTimer = window.setTimeout(() => {
+          cleanup();
+          attach();
+        }, 2200);
+      };
+      const cleanup = () => {
+        window.removeEventListener("scroll", onScroll);
+        if (fallbackTimer !== null) {
+          window.clearTimeout(fallbackTimer);
+          fallbackTimer = null;
+        }
+      };
+      const onScroll = () => {
+        if (window.scrollY > 10) {
+          cleanup();
+          attach();
+        }
+      };
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      armFallback();
     });
   }
 
@@ -60,14 +98,14 @@
   }
 
   function initNavScroll() {
-    const nav = document.querySelector("nav");
-    if (!nav) return;
+    const header = document.querySelector(".site-header");
+    if (!header) return;
 
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        nav.classList.add("scrolled");
+      if (window.scrollY > 20) {
+        header.classList.add("scrolled");
       } else {
-        nav.classList.remove("scrolled");
+        header.classList.remove("scrolled");
       }
     };
 

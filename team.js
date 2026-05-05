@@ -11,12 +11,12 @@ function showSlides(n) {
     // Hide all slides
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
-        dots[i].classList.remove("active");
+        if (dots[i]) dots[i].classList.remove("active");
     }
 
     // Show the selected slide
     slides[slideIndex].style.display = "flex";
-    dots[slideIndex].classList.add("active");
+    if (dots[slideIndex]) dots[slideIndex].classList.add("active");
 }
 
 // Function to change slides with arrows

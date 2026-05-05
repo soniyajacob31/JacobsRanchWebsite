@@ -4,109 +4,142 @@
   <link rel="icon" href="images/favicon.png" type="image/png" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery - Jacob's Ranch and Stables</title>
+  <title>Gallery | Jacob's Ranch and Stables</title>
   <link rel="stylesheet" href="styles.css" />
-  <script defer src="gallery.js"></script>
-  <!-- JavaScript for slideshow -->
 </head>
-
 <body>
-  <div class="aurora-bg" aria-hidden="true"></div>
-  <nav>
-    <a href="index.html" class="logo">Jacob's Ranch and Stables</a>
-    <div class="nav-items">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <!-- <a href="team.html">Meet The Team</a> -->
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <!-- HAMBURGER (mobile only) -->
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+  <div class="page-bg" aria-hidden="true"></div>
 
-    <!-- MOBILE MENU -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="site-brand">
+        <span class="site-brand-text-full">Jacob's Ranch &amp; Stables</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="tel:+12147278487" class="site-header-phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (214) 727-8487
+      </a>
+      <button type="button" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
     <div class="mobile-menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html" class="active">Gallery</a>
       <a href="contact.html">Contact</a>
+      <a href="tel:+12147278487" class="site-header-phone">(214) 727-8487</a>
     </div>
-  </nav>
+  </header>
 
-  <section class="gallery-section animate-on-scroll">
-    <h1>GALLERY</h1>
-    <div class="slideshow-container">
-      <!-- Slide 1 -->
-      <div class="gallery-slide fade" style="display: flex">
-        <img src="images/stables.jpg" alt="Gallery Image 1" />
+  <main>
+    <section class="page-header-dark page-header-dark--center">
+      <div class="container">
+        <span class="section-eyebrow">Facilities &amp; Views</span>
+        <h1 class="gallery-hero-title">A Look Around the Ranch.</h1>
+        <p class="lead">
+          From wide-open pastures to clean stalls: moments from life at Jacob's Ranch &amp; Stables.
+        </p>
       </div>
+    </section>
 
-      <!-- Slide 2 -->
-      <div class="gallery-slide fade">
-        <img src="images/arena.jpg" alt="Gallery Image 2" />
+    <section class="section">
+      <div class="container">
+        <div class="gallery-masonry animate-on-scroll">
+          <div class="gallery-item gallery-item--hero">
+            <img src="images/stables.jpg" alt="Stables at Jacob's Ranch" width="1920" height="1280" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/arena.jpg" alt="Riding arena" width="1600" height="1067" loading="lazy" />
+          </div>
+          <div class="gallery-item gallery-item--tall">
+            <img src="images/1stSection.jpg" alt="Ranch scenery" width="1200" height="1500" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/3horse.jpg" alt="Horses at the ranch" width="1400" height="1050" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/gallery-ranch-cat.png" alt="Cat relaxing in the pasture at sunset" width="900" height="1200" loading="lazy" />
+          </div>
+          <div class="gallery-item gallery-item--wide">
+            <img src="images/mainBack.jpg" alt="Pasture and barn" width="1600" height="1067" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/stable.jpg" alt="Stable" width="1600" height="1067" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/horsesClear.jpg" alt="Horses in the pasture" width="1600" height="1067" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/backClear.jpg" alt="Ranch view" width="1600" height="1067" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/horsesBack.jpg" alt="Horses near the barn" width="1600" height="1067" loading="lazy" />
+          </div>
+        </div>
       </div>
+    </section>
+  </main>
 
-      <!-- Slide 3 -->
-      <div class="gallery-slide fade">
-        <img src="images/1stSection.jpg" alt="Gallery Image 3" />
+  <footer class="site-footer">
+    <div class="site-footer-grid">
+      <div>
+        <div class="site-footer-brand">
+          <div>
+            <h3>Jacob's Ranch &amp; Stables</h3>
+            <p class="tagline">Self-Care Horse Boarding · Texas</p>
+          </div>
+        </div>
+        <p class="lead">
+          Empowering horse owners with the flexibility to be hands-on in their horse's care
+          while enjoying the support of a well-equipped, professionally managed facility.
+        </p>
       </div>
-
-      <!-- Slide 4 -->
-      <div class="gallery-slide fade">
-        <img src="images/3horse.jpg" alt="Gallery Image 2" />
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li>
+            <span class="footer-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" focusable="false"><use href="images/icons.svg#i-map-pin"/></svg></span>
+            <span>630 Southview Dr<br />Allen, TX 75002</span>
+          </li>
+          <li>
+            <span class="footer-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" focusable="false"><use href="images/icons.svg#i-phone"/></svg></span>
+            <a href="tel:+12147278487">(214) 727-8487</a>
+          </li>
+          <li>
+            <span class="footer-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" focusable="false"><use href="images/icons.svg#i-mail"/></svg></span>
+            <a href="mailto:jacobsranchandstables@gmail.com">jacobsranchandstables@gmail.com</a>
+          </li>
+          <li>
+            <span class="footer-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" focusable="false"><use href="images/icons.svg#i-clock"/></svg></span>
+            <span>Mon–Sun · Opens 8 AM</span>
+          </li>
+        </ul>
       </div>
-
-      <!-- Slide 5 -->
-      <div class="gallery-slide fade">
-        <img src="images/mainBack.jpg" alt="Gallery Image 3" />
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
-
-      <!-- Slide 6 -->
-      <div class="gallery-slide fade">
-        <img src="images/stable.jpg" alt="Gallery Image 2" />
-      </div>
-
-      <!-- Slide 7 -->
-      <div class="gallery-slide fade">
-        <img src="images/horsesClear.jpg" alt="Gallery Image 2" />
-      </div>
-
-      <!-- Slide 8 -->
-      <div class="gallery-slide fade">
-        <img src="images/backClear.jpg" alt="Gallery Image 2" />
-      </div>
-
-      <!-- Slide 9 -->
-      <div class="gallery-slide fade">
-        <img src="images/horsesBack.jpg" alt="Gallery Image 2" />
-      </div>
-
-      <!-- Navigation Dots -->
-      <div class="dots-container">
-        <span class="dot" onclick="setSlide(0)"></span>
-        <span class="dot" onclick="setSlide(1)"></span>
-        <span class="dot" onclick="setSlide(2)"></span>
-        <span class="dot" onclick="setSlide(3)"></span>
-        <span class="dot" onclick="setSlide(4)"></span>
-        <span class="dot" onclick="setSlide(5)"></span>
-        <span class="dot" onclick="setSlide(6)"></span>
-        <span class="dot" onclick="setSlide(7)"></span>
-        <span class="dot" onclick="setSlide(8)"></span>
-      </div>
-
-      <!-- Navigation Arrows -->
-      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-      <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
-  </section>
+    <div class="site-footer-bottom">
+      <span>© 2026 Jacob's Ranch and Stables. All rights reserved.</span>
+      <span>Lucas / Allen, Texas · Self-Care Horse Boarding</span>
+    </div>
+  </footer>
 
-  <div class="copyright">
-    <h1>©2026 by Jacob's Ranch and Stables. All Rights Reserved.</h1>
-  </div>
   <script src="hamburger.js"></script>
   <script src="app.js"></script>
 </body>
