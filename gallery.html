@@ -60,9 +60,6 @@
           <div class="gallery-item">
             <img src="images/arena.jpg" alt="Riding arena" width="1600" height="1067" loading="lazy" />
           </div>
-          <div class="gallery-item gallery-item--tall">
-            <img src="images/1stSection.jpg" alt="Ranch scenery" width="1200" height="1500" loading="lazy" />
-          </div>
           <div class="gallery-item">
             <img src="images/3horse.jpg" alt="Horses at the ranch" width="1400" height="1050" loading="lazy" />
           </div>
@@ -79,15 +76,68 @@
             <img src="images/horsesClear.jpg" alt="Horses in the pasture" width="1600" height="1067" loading="lazy" />
           </div>
           <div class="gallery-item">
-            <img src="images/backClear.jpg" alt="Ranch view" width="1600" height="1067" loading="lazy" />
+            <img src="images/1Horse.jpg" alt="Horse at the ranch" width="1206" height="1968" loading="lazy" />
           </div>
           <div class="gallery-item">
             <img src="images/horsesBack.jpg" alt="Horses near the barn" width="1600" height="1067" loading="lazy" />
+          </div>
+          <div class="gallery-item gallery-item--wide">
+            <img src="images/frontBasketball.png" alt="Outdoor sport court with basketball hoop at sunset" width="1024" height="691" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/sunset.png" alt="Sunset view through the barn doorway" width="1024" height="768" loading="lazy" />
+          </div>
+          <div class="gallery-item gallery-item--wide">
+            <img src="images/quarantinePasture.png" alt="Green pasture with hay feeder and distant barns" width="1024" height="768" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/mainPasture.png" alt="Barn and tree in a grassy paddock at sunset" width="1024" height="768" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/front.png" alt="Front of the main barn with landscaped garden beds" width="1024" height="768" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/indoorStalls.png" alt="Interior aisle of horse stalls with wood shavings" width="1024" height="767" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/back.png" alt="Barn and shade tree with picnic table in the pasture" width="1024" height="768" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/marioPasture.png" alt="Horse standing in a fenced paddock at sunset" width="1024" height="768" loading="lazy" />
+          </div>
+          <div class="gallery-item gallery-item--wide">
+            <img src="images/indoorArena.png" alt="Indoor riding arena with warm evening light" width="1024" height="768" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/pond.png" alt="Pond surrounded by trees with the ranch house in view" width="1024" height="768" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/roundPen.png" alt="Round pen in the pasture at golden hour" width="1024" height="768" loading="lazy" />
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <div class="gallery-lightbox" id="gallery-lightbox" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Photo gallery viewer">
+    <div class="gallery-lightbox-backdrop" data-lightbox-close></div>
+    <div class="gallery-lightbox-panel">
+      <button type="button" class="gallery-lightbox-close" aria-label="Close gallery">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <button type="button" class="gallery-lightbox-nav gallery-lightbox-prev" aria-label="Previous photo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button type="button" class="gallery-lightbox-nav gallery-lightbox-next" aria-label="Next photo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+      <div class="gallery-lightbox-stage">
+        <img class="gallery-lightbox-image" src="" alt="" />
+      </div>
+      <p class="gallery-lightbox-counter" aria-live="polite"></p>
+      <div class="gallery-lightbox-thumbs" role="tablist" aria-label="Gallery thumbnails"></div>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div class="site-footer-grid">
@@ -142,5 +192,6 @@
 
   <script src="hamburger.js"></script>
   <script src="app.js"></script>
+  <script src="gallery.js"></script>
 </body>
 </html>
